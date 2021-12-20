@@ -1,4 +1,7 @@
 Fecha Local,Fecha UTC,Latitud,Longitud,Profundidad [Km],Magnitud,Referencia Geográfica
+2021-12-20 16:12:37,2021-12-20 19:12:37,-24.221,-67.405,229.5,4.4 Mw, 86 km al SE de Socaire
+2021-12-20 15:38:21,2021-12-20 18:38:21,-23.804,-66.968,266.0,3.4 Ml, 97 km al E de Socaire
+2021-12-20 14:37:55,2021-12-20 17:37:55,-24.556,-69.408,83.7,3.3 Ml, 48 km al SO de Mina La Escondida.
 2021-12-20 07:49:25,2021-12-20 10:49:25,-23.835,-67.207,243.2,3.2 Ml, 75 km al E de Socaire
 2021-12-20 05:22:48,2021-12-20 08:22:48,-23.112,-66.722,258.5,2.9 Ml, 131 km al E de Socaire
 2021-12-20 04:35:39,2021-12-20 07:35:39,-24.221,-67.511,208.2,3.5 Ml, 80 km al SE de Socaire
@@ -347,4 +350,3 @@ Fecha Local,Fecha UTC,Latitud,Longitud,Profundidad [Km],Magnitud,Referencia Geog
 10-09-2021 18:07,09-10-2021 21:07,-23.952,-67.316,215.6,4.7 Ml, 71 km al SE de Socaire
 10-09-2021 9:32,09-10-2021 12:32,-22.25,-68.657,123.9,3.2 Ml, 37 km al NE de Calama
 Test push commit to the remote in the workflow,,,,,,
-Test push commit to the remote in the workflow
