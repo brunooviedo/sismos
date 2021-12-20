@@ -31,8 +31,8 @@ jobs:
               # Push a main
           - name: Pull main
             run: |
-             git config --global user.email "bruno.oviedo89@gmail.com"
-             git config --global user.name "brunooviedo"
+             git config --local user.email "bruno.oviedo89@gmail.com"
+             git config --local user.name "brunooviedo"
              
           - name: commit
             run: |
