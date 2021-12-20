@@ -34,12 +34,12 @@ jobs:
              git config --local user.email "bruno.oviedo89@gmail.com"
              git config --local user.name "brunooviedo"
              git add -A
-             git commit -m "data.csv" -a
+             git commit -m "update data.csv" -a
              
           #- name: commit
             #run: |
                #git add data.csv
-              # git commit -m "data.csv"
+              # git commit -m "update data.csv"
 
    
           
