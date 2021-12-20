@@ -38,6 +38,6 @@ jobs:
             run: |
                git add data.csv
                git commit -m "data.csv"
-               git push origin master
+               git Push -u Origin master
    
           
