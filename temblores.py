@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+import urllib.request
+from bs4 import BeautifulSoup
+import pandas as pd
+import numpy as np
+from pandas.core.frame import DataFrame
+
+
+e = urllib.request.urlopen("http://www.sismologia.cl/ultimos_sismos.html").read()
+
+soup = BeautifulSoup(e, 'html.parser')
+
+# Ejemplo de como imprimir todo
+# print soup.prettify()
+
+# Obtenemos la tabla
+
+tabla_sismos = soup.find_all('table')[0]
+
+# Obtenemos todas las filas
+rows = tabla_sismos.find_all("tr")
+
+output_rows = []
+for row in rows:
+    # obtenemos todas las columns
+    cells = row.find_all("td")
+    output_row = []
+    if len(cells) > 0:
+        for cell in cells:
+            output_row.append(cell.text)
+        output_rows.append(output_row)
+
+dataset = pd.DataFrame(output_rows)
+
+dataset.columns = [
+    "Fecha Local",
+    "Fecha UTC",
+    "Latitud",
+    "Longitud",
+    "Profundidad [Km]",
+    "Magnitud",
+    "Referencia Geográfica",
+]
+dataset[["Latitud", "Longitud"]] = dataset[["Latitud", "Longitud"]].apply(pd.to_numeric)
+
+dataset_filter = dataset[
+    (-27.100 <= dataset["Latitud"])
+    & (dataset["Latitud"] <= -21.680)
+    & (-72.150 <= dataset["Longitud"])
+    & (dataset["Longitud"] <= -66.180)
+]
+
+df = pd.read_csv("data.csv") #leer archivo data.csv
+
+
+con = pd.concat([dataset_filter, df]).astype({"Profundidad [Km]":float, "Latitud":float}) # concatenar dataset_filter y df, ademas cambia string a float las columnas Profundidad [Km] y Latitud
+
+con = con.drop_duplicates()
+
+con.to_csv("data.csv",  index=None) # crear csv con archivos concatenados
