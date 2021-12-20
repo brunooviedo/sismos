@@ -1,0 +1,39 @@
+name: py
+on:
+      schedule:
+            - cron: "*/5  * * * *" #runs at 00:00 UTC everyday
+jobs:
+      build:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - name: actualizar sismos
+            uses: actions/checkout@v2 # checkout the repository content to github runner.
+          - name: setup python
+            uses: actions/setup-python@v2
+            with:
+              persist-credentials: false 
+              fetch-depth: 0
+         # Python 3.7
+          - name: Inicializando Python 3.7
+            uses: actions/setup-python@v1
+            with:
+               python-version: 3.7
+          - name: Install dependencies
+            run: |
+             python -m pip install --upgrade pip
+             pip install flake8 pytest
+             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          - name: Lint with flake8
+            run: |
+             python temblores.py
+          - name: update file and push to remote
+            run: |
+             echo "Test push commit to the remote in the workflow" >> data.csv
+             
+             git config --global user name "github-actions [bot]"
+             git config --global user email "41898282-github-actions [bot]@users.noreply
+
+             git add -A
+             git commit -m "Update data.csv"
+             git push
