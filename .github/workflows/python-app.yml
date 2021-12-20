@@ -37,7 +37,7 @@ jobs:
           - name: commit
             run: |
                git add data.csv
-               git commit -m "new date commit"
+               git commit -m "data.csv"
                git push origin master
    
           
