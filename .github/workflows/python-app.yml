@@ -27,5 +27,11 @@ jobs:
           - name: Lint with flake8
             run: |
              python temblores.py
+             
+          - name: commit
+            run: |
+               git add data.csv
+               git commit -m "new date commit"
+               git push origin master
    
           
