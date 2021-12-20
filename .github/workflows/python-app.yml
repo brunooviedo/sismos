@@ -5,12 +5,12 @@ on:
 jobs:
       build:
         runs-on: ubuntu-latest
-    
+        
         steps:
           - name: actualizar sismos
-            uses: actions/checkout@master #checkout the repository content to github runner.
+            uses: actions/checkout@v2 # checkout the repository content to github runner.
           - name: setup python
-            uses: appleboy/scp-action@master
+            uses: actions/setup-python@v2
             with:
               persist-credentials: false 
               fetch-depth: 0
