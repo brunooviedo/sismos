@@ -35,7 +35,7 @@ jobs:
              git config --local user.name "brunooviedo"
              git add -A
              git commit -m "update data.csv"
-             git push
+             git pull
              git fetch origin master
           #- name: commit
             #run: |
