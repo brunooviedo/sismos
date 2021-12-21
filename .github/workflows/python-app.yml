@@ -32,6 +32,6 @@ jobs:
             
           - name: acommit
             run: |
-             git add -a
+             git add --all
              git commit -m 'new commi'
              git push
