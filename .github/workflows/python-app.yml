@@ -36,7 +36,7 @@ jobs:
              git add -A
              git commit -m "update data.csv"
              git push
-             
+             git fetch origin master
           #- name: commit
             #run: |
                #git add data.csv
