@@ -31,9 +31,9 @@ jobs:
               # Push a main
           - name: Pull main
             run: |
-             git config user.email "bruno.oviedo89@gmail.com"
-             git config user.name "Automated"
-             git add -A
+            
+
+             git add data.csv
              git commit -m "update data.csv"
              git push
 
