@@ -35,5 +35,5 @@ jobs:
           - name: acommit
             run: |
              git add --all
-             git commit -m "🤖 Actualizar csv"
+             git commit -m "🤖 Actualizar CSV"
              git push
