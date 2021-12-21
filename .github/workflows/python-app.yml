@@ -27,21 +27,8 @@ jobs:
           - name: Lint with flake8
             run: |
              python temblores.py
-             
-              # Push a main
-          - name: Pull main
+          - name: acommit
             run: |
-            
-
-             git add data.csv
-             git commit -m "update data.csv"
-             git push
-
-
-          #- name: commit
-            #run: |
-               #git add data.csv
-              # git commit -m "update data.csv"
-
-   
-          
+             git add -a
+             git commit -m 'new commi'
+             git push origin
