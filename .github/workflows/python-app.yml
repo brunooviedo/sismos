@@ -5,20 +5,19 @@ on:
     - main
     
   schedule:
-            - cron: "*/5  * * * *" #runs at 00:00 UTC everyday
+    - cron: "*/5  * * * *" 
 jobs:
       build:
         runs-on: ubuntu-latest
         
         steps:
           - name: actualizar sismos
-            uses: actions/checkout@v2 # checkout the repository content to github runner.
-          - name: setup python
-            uses: actions/setup-python@v2
+            uses: actions/checkout@v2
             with:
-              persist-credentials: false 
-              fetch-depth: 0
-         # Python 3.7
+               persist-credentials: false 
+               fetch-depth: 0
+            
+           # Python 3.7
           - name: Inicializando Python 3.7
             uses: actions/setup-python@v1
             with:
@@ -36,5 +35,5 @@ jobs:
           - name: acommit
             run: |
              git add --all
-             git commit -m 'new commi'
+             git commit -m 'Actualizar csv'
              git push
