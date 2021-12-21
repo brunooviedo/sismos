@@ -34,3 +34,10 @@ jobs:
     - name: Test with pytest
       run: |
         python temblores.py
+        # Push a main
+          - name: Pull main
+            run: |
+             git config --local user.email "email@gmail.com"
+             git config --local user.name "username"
+             git add -A
+             git commit -m "data.csv"
