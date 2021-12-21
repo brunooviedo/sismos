@@ -1,4 +1,4 @@
-name: py
+-name: py
 on:
       schedule:
             - cron: "*/5  * * * *" #runs at 00:00 UTC everyday
@@ -34,6 +34,6 @@ jobs:
              
           - name: acommit
             run: |
-             git add -all
+             git add --all
              git commit -m 'new commi'
              git push
