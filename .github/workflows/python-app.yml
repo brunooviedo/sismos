@@ -1,0 +1,39 @@
+name: Actualizar_Csv
+on:
+    
+  schedule:
+    - cron: "*/5  * * * *" 
+jobs:
+      build:
+        runs-on: ubuntu-latest
+        
+        steps:
+          - name: actualizar sismos
+            uses: actions/checkout@v2
+          - name: setup python
+            uses: actions/setup-python@v2
+            with:
+              persist-credentials: false 
+              fetch-depth: 0
+            
+           # Python 3.7
+          - name: Inicializando Python 3.7
+            uses: actions/setup-python@v1
+            with:
+               python-version: 3.7
+          - name: Install dependencies
+          - name: Instalando dependencias de Python
+            run: |
+             pip install -r requirements.txt
+             
+          - name: ejecutar py
+            run: |
+             python temblores.py
+             git config --local user.email "bruno.oviedo89@gmail.com"
+             git config --local user.name "brunooviedo"
+            
+          - name: acommit
+            run: |
+             git add --all
+             git commit -m "🤖 Actualizar CSV"
+             git push
