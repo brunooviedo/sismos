@@ -27,6 +27,11 @@ jobs:
           - name: Lint with flake8
             run: |
              python temblores.py
+             git config --global user.email "bruno.oviedo89@gmail.com"
+
+             git config --global user.name "brunooviedo"
+             
+             
           - name: acommit
             run: |
              git add -a
