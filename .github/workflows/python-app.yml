@@ -1,4 +1,4 @@
-name: Generate templates
+name: actualiza sismos
 
 on:
   schedule:
