@@ -34,7 +34,6 @@ jobs:
       with:
         source_file: 'data.csv'
         destination_repo: 'brunooviedo/sismos'
-        destination_folder: 'data/csv'
         user_email: 'bruno.oviedo89@gmail.com'
         user_name: 'brunooviedo'
         commit_message: 'Workflow update'
