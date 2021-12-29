@@ -31,7 +31,7 @@ jobs:
         python temblores.py
         
     - name: Commit and push if it changed
-      run: |-
+      run: |
         git config user.name "brunooviedo"
         git config user.email "bruno.oviedo89@gmail.com"
         git add data.csv
