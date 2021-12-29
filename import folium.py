@@ -10,7 +10,7 @@ import pandas as pd
 mapa = folium.Map([-24.093570, -69.298989], zoom_start=7,  tiles='Stamen Terrain',)
 
 # leer el archivo csv que contiene los datos de localización
-data = pd.read_csv(r'C:\Users\Bruno\Desktop\Nueva carpeta\data.csv')
+data = pd.read_csv('data.csv')
 
 df = data.head(10)
 
