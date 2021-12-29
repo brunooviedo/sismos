@@ -60,4 +60,9 @@ con = pd.concat([dataset_filter, df]).astype({"Profundidad [Km]":float, "Latitud
 
 con = con.drop_duplicates()
 
-con.to_csv("data.csv",  index=None) # crear csv con archivos concatenados
+con['Magnitud']=con['Magnitud'].astype(str)
+f =con["Magnitud"].str.split(' ', expand=True)
+f.columns = ['Magnitud2', 'Simbolo']
+con2 = pd.concat([con, f], axis=1)
+
+con2.to_csv("data.csv",  index=None) # crear csv con archivos concatenados
