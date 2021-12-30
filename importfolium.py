@@ -12,7 +12,7 @@ mapa = folium.Map([-24.093570, -69.298989], zoom_start=7,  tiles='Stamen Terrain
 # leer el archivo csv que contiene los datos de localización
 data = pd.read_csv('data2.csv')
 
-df = data.head(10)
+df = data.head(100)
 
 tooltip = "Ubicacion Tranque"
 
