@@ -49,5 +49,5 @@ jobs:
         git config user.email "bruno.oviedo89@gmail.com"
         git add index.html
         timestamp=$(date -u)
-        git commit Archivo actualizado
+        git commit -F message.txt || exit 0
         git push
