@@ -35,7 +35,7 @@ jobs:
       run: |
         git config user.name "brunooviedo"
         git config user.email "bruno.oviedo89@gmail.com"
-        git add mapa.html
+        git add index.html
         timestamp=$(date -u)
-        git commit -F message.txt || exit 0
+        git commit Archivo actualizado
         git push
