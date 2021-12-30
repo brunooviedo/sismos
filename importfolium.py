@@ -130,4 +130,4 @@ folium.Marker(
         
         
 mapa1.save('mapa.html')
-mapa.save('Cluster_Map.html')
+mapa.save('index.html')
