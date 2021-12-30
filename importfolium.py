@@ -10,7 +10,7 @@ import pandas as pd
 mapa = folium.Map([-24.093570, -69.298989], zoom_start=7,  tiles='Stamen Terrain',)
 
 # leer el archivo csv que contiene los datos de localización
-data = pd.read_csv('data.csv')
+data = pd.read_csv(r'C:\Users\Bruno\Desktop\Nueva carpeta\data2.csv')
 
 df = data.head(10)
 
@@ -18,14 +18,14 @@ tooltip = "Ubicacion Tranque"
 
 
 
-def generate_popup(Hora, Magnitud2, Profundidad, referencia):
-    return f'''<strong>Hora Local:</strong><br> {Hora}<br><strong>Magnitud2:</strong> {Magnitud2}<br><strong>Profundidad:</strong> {Profundidad} <strong>Referencia:</strong>{referencia}'''
+def generate_popup(Hora, valores, Profundidad, referencia):
+    return f'''<strong>Hora Local:</strong><br> {Hora}<br><strong>valores:</strong> {valores}<br><strong>Profundidad:</strong> {Profundidad} <strong>Referencia:</strong>{referencia}'''
 
-def generate_color(Magnitud2):
-    if Magnitud2 <= 3:
+def generate_color(valores):
+    if valores <= 3:
         c_outline, c_fill = '#008f39', '#008f39'
         m_opacity, f_opacity = 0.4, 0.3
-    elif Magnitud2 <= 5:
+    elif valores <= 5:
         c_outline, c_fill = '#ffda79', '#ffda79'
         m_opacity, f_opacity = 0.6, 0.5
     else:
@@ -50,7 +50,7 @@ for _, row in df.iterrows():
     mc.add_child(folium.Marker(
         location=[str(row['Latitud']),
         str(row['Longitud'])],
-        popup = generate_popup(row ['Fecha Local'],row ['Magnitud2'], row['Profundidad [Km]'], row['Referencia Geográfica']),
+        popup = generate_popup(row ['Fecha Local'],row ['valores'], row['Profundidad [Km]'], row['Referencia Geográfica']),
         clustered_marker=True))
     
 mapa.add_child(mc)
@@ -86,16 +86,16 @@ mapa1 = folium.Map([-24.093570, -69.298989], zoom_start=7,  tiles='Stamen Terrai
 
 for _, row in df.iterrows():
 # for i in range(len(data)):
-        c_outline, c_fill, m_opacity, f_opacity = generate_color(row['Magnitud2'])
+        c_outline, c_fill, m_opacity, f_opacity = generate_color(row['valores'])
         folium.Circle(
             location=[row['Latitud'], row['Longitud']],
-            popup = generate_popup(row ['Fecha Local'],row ['Magnitud2'], row['Profundidad [Km]'], row['Referencia Geográfica']),
+            popup = generate_popup(row ['Fecha Local'],row ['valores'], row['Profundidad [Km]'], row['Referencia Geográfica']),
             color=c_outline,  # this is the color of the border
             fill=True,
             fill_color=c_fill,  # fill is inside the circle
             opacity=m_opacity,  # this is the alpha for the border
             fill_opacity=f_opacity,  # we will make that less opaque so we can see layers
-            radius=(row['Magnitud2'] ** 6) / 3
+            radius=(row['valores'] ** 6) / 3
         
     ).add_to(mapa1)
         
@@ -127,8 +127,7 @@ folium.Marker(
     icon=folium.Icon(color="red",icon="home", prefix='fa'),
     tooltip=tooltip
 ).add_to(mapa1)
-
-       
         
-mapa1.save('mapa.html')
-mapa.save('Cluster_Map.html')
+        
+mapa1.save(r'C:\Users\Bruno\Desktop\Nueva carpeta\mapa.html')
+mapa.save(r'C:\Users\Bruno\Desktop\Nueva carpeta\Cluster_Map.html')
