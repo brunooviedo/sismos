@@ -60,9 +60,15 @@ con = pd.concat([dataset_filter, df]).astype({"Profundidad [Km]":float, "Latitud
 
 con = con.drop_duplicates()
 
-con['Magnitud']=con['Magnitud'].astype(str)
-f =con["Magnitud"].str.split(' ', expand=True)
-f.columns = ['Magnitud2', 'Simbolo']
-con2 = pd.concat([con, f], axis=1)
+con.to_csv("data.csv",  index=None) # crear csv con archivos concatenados
 
-con2.to_csv("data.csv",  index=None) # crear csv con archivos concatenados
+df1 = pd.read_csv("data.csv") #leer archivo data.csv
+
+df1["Magnitud"].str.split('').astype(str) #separar magnitud en 2 columnas
+
+split_datos = df1["Magnitud"].str.split(' ', expand=True) #separar magnitud en 2
+split_datos.columns = ['valores', 'letras'] #crear 2 columnas valores y letras
+con2 = pd.concat([df1, split_datos], axis=1) #concatenar datos del csv con las 2 columnas nuevas.
+
+
+con2.to_csv("data2.csv",  index=None) # crear nuevo csv con archivos concatenados
