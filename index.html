@@ -1,1 +1,325 @@
-hola
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_42dddd38589c41689a3e7c8629a2e83a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_42dddd38589c41689a3e7c8629a2e83a" ></div>
+        
+</body>
+<script>    
+    
+            var map_42dddd38589c41689a3e7c8629a2e83a = L.map(
+                "map_42dddd38589c41689a3e7c8629a2e83a",
+                {
+                    center: [-24.09357, -69.298989],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fc2a697b0a8949bcaaf968181798fbc1 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_42dddd38589c41689a3e7c8629a2e83a);
+        
+    
+            var marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3 = L.markerClusterGroup(
+                {}
+            );
+            map_42dddd38589c41689a3e7c8629a2e83a.addLayer(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+            var marker_f60c7cc9e5a847fda61fba4cad0f1a06 = L.marker(
+                [-22.234, -68.697],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_00359702d9f54f50a9878aca1ce97454 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7e66dddf136a441cbb1c63827a3a9ab1 = $(`<div id="html_7e66dddf136a441cbb1c63827a3a9ab1" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 10:48:25<br><strong>valores:</strong> 2.7<br><strong>Profundidad:</strong> 109.8 <strong>Referencia:</strong> 36 km al NE de Calama</div>`)[0];
+            popup_00359702d9f54f50a9878aca1ce97454.setContent(html_7e66dddf136a441cbb1c63827a3a9ab1);
+        
+
+        marker_f60c7cc9e5a847fda61fba4cad0f1a06.bindPopup(popup_00359702d9f54f50a9878aca1ce97454)
+        ;
+
+        
+    
+    
+            var marker_48a587cc6d0f4922aebae384cc302b34 = L.marker(
+                [-22.404, -68.78],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_ffd75b90d19b43c9894c2e754de568aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c84fbec9385448fba90027bebde1743 = $(`<div id="html_1c84fbec9385448fba90027bebde1743" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 09:51:48<br><strong>valores:</strong> 2.6<br><strong>Profundidad:</strong> 118.0 <strong>Referencia:</strong> 17 km al NE de Calama</div>`)[0];
+            popup_ffd75b90d19b43c9894c2e754de568aa.setContent(html_1c84fbec9385448fba90027bebde1743);
+        
+
+        marker_48a587cc6d0f4922aebae384cc302b34.bindPopup(popup_ffd75b90d19b43c9894c2e754de568aa)
+        ;
+
+        
+    
+    
+            var marker_d3d59920053740029a0154f9bd064c9a = L.marker(
+                [-23.86, -68.103],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_980398536b484bfea5d999ceb3dd5eeb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0545cbaeebde431e98b028f77606d450 = $(`<div id="html_0545cbaeebde431e98b028f77606d450" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 06:38:12<br><strong>valores:</strong> 4.2<br><strong>Profundidad:</strong> 138.3 <strong>Referencia:</strong> 37 km al SO de Socaire</div>`)[0];
+            popup_980398536b484bfea5d999ceb3dd5eeb.setContent(html_0545cbaeebde431e98b028f77606d450);
+        
+
+        marker_d3d59920053740029a0154f9bd064c9a.bindPopup(popup_980398536b484bfea5d999ceb3dd5eeb)
+        ;
+
+        
+    
+    
+            var marker_f609d68c9a534926b94ac1166c9fa785 = L.marker(
+                [-22.104, -68.856],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_de6ba295f2204b0d8dca8e63b4d757fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e2bfab3c20aa41c5adfaa214446add8f = $(`<div id="html_e2bfab3c20aa41c5adfaa214446add8f" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 05:22:12<br><strong>valores:</strong> 2.7<br><strong>Profundidad:</strong> 120.4 <strong>Referencia:</strong> 41 km al N de Calama</div>`)[0];
+            popup_de6ba295f2204b0d8dca8e63b4d757fe.setContent(html_e2bfab3c20aa41c5adfaa214446add8f);
+        
+
+        marker_f609d68c9a534926b94ac1166c9fa785.bindPopup(popup_de6ba295f2204b0d8dca8e63b4d757fe)
+        ;
+
+        
+    
+    
+            var marker_bfa6e705e192404b85a7a606bdc60b32 = L.marker(
+                [-23.975, -67.417],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_731958fd371c4062ab7931b4c71ead5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e2807a5a12b41b4bf72d599e9e53c2b = $(`<div id="html_8e2807a5a12b41b4bf72d599e9e53c2b" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 01:32:10<br><strong>valores:</strong> 3.0<br><strong>Profundidad:</strong> 238.1 <strong>Referencia:</strong> 64 km al SE de Socaire</div>`)[0];
+            popup_731958fd371c4062ab7931b4c71ead5a.setContent(html_8e2807a5a12b41b4bf72d599e9e53c2b);
+        
+
+        marker_bfa6e705e192404b85a7a606bdc60b32.bindPopup(popup_731958fd371c4062ab7931b4c71ead5a)
+        ;
+
+        
+    
+    
+            var marker_7c1408ad84eb4f49aa78529adb0be14a = L.marker(
+                [-23.928, -67.126],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_3d8a10b939ef4ee3a2a3fbd99cf21a2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13e65b192c8a452d9168187cd91dcc43 = $(`<div id="html_13e65b192c8a452d9168187cd91dcc43" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 01:28:40<br><strong>valores:</strong> 2.9<br><strong>Profundidad:</strong> 186.1 <strong>Referencia:</strong> 86 km al SE de Socaire</div>`)[0];
+            popup_3d8a10b939ef4ee3a2a3fbd99cf21a2b.setContent(html_13e65b192c8a452d9168187cd91dcc43);
+        
+
+        marker_7c1408ad84eb4f49aa78529adb0be14a.bindPopup(popup_3d8a10b939ef4ee3a2a3fbd99cf21a2b)
+        ;
+
+        
+    
+    
+            var marker_f08a1e43e6b04dd097144da868354684 = L.marker(
+                [-23.86, -68.10300000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_8527d738463a4c3d935396609965ad9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1acd483f010e49db8071738aa99186ec = $(`<div id="html_1acd483f010e49db8071738aa99186ec" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 06:38:12<br><strong>valores:</strong> 4.2<br><strong>Profundidad:</strong> 138.3 <strong>Referencia:</strong> 37 km al SO de Socaire</div>`)[0];
+            popup_8527d738463a4c3d935396609965ad9a.setContent(html_1acd483f010e49db8071738aa99186ec);
+        
+
+        marker_f08a1e43e6b04dd097144da868354684.bindPopup(popup_8527d738463a4c3d935396609965ad9a)
+        ;
+
+        
+    
+    
+            var marker_bc45dbaeea1c4a4aaf341b261c49fda4 = L.marker(
+                [-22.104, -68.85600000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_39f116d3590d4dae996a476dbb216de9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bc4d3ccb3dc4d0ea43fb12f31f04b41 = $(`<div id="html_8bc4d3ccb3dc4d0ea43fb12f31f04b41" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 05:22:12<br><strong>valores:</strong> 2.7<br><strong>Profundidad:</strong> 120.4 <strong>Referencia:</strong> 41 km al N de Calama</div>`)[0];
+            popup_39f116d3590d4dae996a476dbb216de9.setContent(html_8bc4d3ccb3dc4d0ea43fb12f31f04b41);
+        
+
+        marker_bc45dbaeea1c4a4aaf341b261c49fda4.bindPopup(popup_39f116d3590d4dae996a476dbb216de9)
+        ;
+
+        
+    
+    
+            var marker_e3f5c1a52a354d9099dfecdf68d59279 = L.marker(
+                [-21.943, -68.891],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_10dd56025cc24253ad5c5163a73ccd2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_315c3185be3647d38d8496ecd414c561 = $(`<div id="html_315c3185be3647d38d8496ecd414c561" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 00:43:22<br><strong>valores:</strong> 2.6<br><strong>Profundidad:</strong> 121.2 <strong>Referencia:</strong> 59 km al N de Calama</div>`)[0];
+            popup_10dd56025cc24253ad5c5163a73ccd2f.setContent(html_315c3185be3647d38d8496ecd414c561);
+        
+
+        marker_e3f5c1a52a354d9099dfecdf68d59279.bindPopup(popup_10dd56025cc24253ad5c5163a73ccd2f)
+        ;
+
+        
+    
+    
+            var marker_c04e82b34284460c86b3769c7e28fdb3 = L.marker(
+                [-24.05, -67.32600000000001],
+                {"clusteredMarker": true}
+            ).addTo(marker_cluster_8ad787b5a6bb46db85405e5d8d0f03c3);
+        
+    
+        var popup_8ac19bfbd87945b0a302cc851d66ab98 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_412ac65ceb79436abfbe466e0e1b1cb3 = $(`<div id="html_412ac65ceb79436abfbe466e0e1b1cb3" style="width: 100.0%; height: 100.0%;"><strong>Hora Local:</strong><br> 2021-12-29 00:23:49<br><strong>valores:</strong> 3.5<br><strong>Profundidad:</strong> 214.7 <strong>Referencia:</strong> 77 km al SE de Socaire</div>`)[0];
+            popup_8ac19bfbd87945b0a302cc851d66ab98.setContent(html_412ac65ceb79436abfbe466e0e1b1cb3);
+        
+
+        marker_c04e82b34284460c86b3769c7e28fdb3.bindPopup(popup_8ac19bfbd87945b0a302cc851d66ab98)
+        ;
+
+        
+    
+    
+            var circle_b41d66df65a4460c927c763fc55032c7 = L.circle(
+                [-24.397486, -69.161143],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 200000, "stroke": true, "weight": 3}
+            ).addTo(map_42dddd38589c41689a3e7c8629a2e83a);
+        
+    
+        var popup_ba38f37ea7a9437296d427c4358357aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e0d20cc74384fb8b4bc76eeedaf7660 = $(`<div id="html_2e0d20cc74384fb8b4bc76eeedaf7660" style="width: 100.0%; height: 100.0%;">Radio de 200 Kilometros</div>`)[0];
+            popup_ba38f37ea7a9437296d427c4358357aa.setContent(html_2e0d20cc74384fb8b4bc76eeedaf7660);
+        
+
+        circle_b41d66df65a4460c927c763fc55032c7.bindPopup(popup_ba38f37ea7a9437296d427c4358357aa)
+        ;
+
+        
+    
+    
+            var circle_b0f57514499242b48c1b658f61ba94ee = L.circle(
+                [-24.397486, -69.161143],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.5, "radius": 300000, "stroke": true, "weight": 3}
+            ).addTo(map_42dddd38589c41689a3e7c8629a2e83a);
+        
+    
+        var popup_6c4284daa11941a39fe6fb59b1bc6867 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f152182ec534bbd9cab1333dd3f52f4 = $(`<div id="html_8f152182ec534bbd9cab1333dd3f52f4" style="width: 100.0%; height: 100.0%;">Radio de 300 Kilometros</div>`)[0];
+            popup_6c4284daa11941a39fe6fb59b1bc6867.setContent(html_8f152182ec534bbd9cab1333dd3f52f4);
+        
+
+        circle_b0f57514499242b48c1b658f61ba94ee.bindPopup(popup_6c4284daa11941a39fe6fb59b1bc6867)
+        ;
+
+        
+    
+    
+            var marker_b3d7160eb8d64ad4a6ad6ae2dae41e76 = L.marker(
+                [-24.397486, -69.161143],
+                {}
+            ).addTo(map_42dddd38589c41689a3e7c8629a2e83a);
+        
+    
+            var icon_efa845a32de74c7eafb667b7aeb66f0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b3d7160eb8d64ad4a6ad6ae2dae41e76.setIcon(icon_efa845a32de74c7eafb667b7aeb66f0a);
+        
+    
+        var popup_8bf33ab02e7d4265b9fbea019883e8e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27830a8475474088aea150a4784f5cce = $(`<div id="html_27830a8475474088aea150a4784f5cce" style="width: 100.0%; height: 100.0%;"><i>Coordenadas Tranque -24.397486, -72.161143</i></div>`)[0];
+            popup_8bf33ab02e7d4265b9fbea019883e8e2.setContent(html_27830a8475474088aea150a4784f5cce);
+        
+
+        marker_b3d7160eb8d64ad4a6ad6ae2dae41e76.bindPopup(popup_8bf33ab02e7d4265b9fbea019883e8e2)
+        ;
+
+        
+    
+</script>
