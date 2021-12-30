@@ -10,7 +10,7 @@ import pandas as pd
 mapa = folium.Map([-24.093570, -69.298989], zoom_start=7,  tiles='Stamen Terrain',)
 
 # leer el archivo csv que contiene los datos de localización
-data = pd.read_csv(r'C:\Users\Bruno\Desktop\Nueva carpeta\data2.csv')
+data = pd.read_csv('data2.csv')
 
 df = data.head(10)
 
@@ -129,5 +129,5 @@ folium.Marker(
 ).add_to(mapa1)
         
         
-mapa1.save(r'C:\Users\Bruno\Desktop\Nueva carpeta\mapa.html')
-mapa.save(r'C:\Users\Bruno\Desktop\Nueva carpeta\Cluster_Map.html')
+mapa1.save('mapa.html')
+mapa.save('Cluster_Map.html')
