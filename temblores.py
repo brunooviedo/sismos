@@ -13,9 +13,6 @@ e = urllib.request.urlopen("http://www.sismologia.cl/ultimos_sismos.html").read(
 
 soup = BeautifulSoup(e, 'html.parser')
 
-# Ejemplo de como imprimir todo
-# print soup.prettify()
-
 # Obtenemos la tabla
 
 tabla_sismos = soup.find_all('table')[0]
