@@ -127,7 +127,14 @@ folium.Marker(
     icon=folium.Icon(color="red",icon="home", prefix='fa'),
     tooltip=tooltip
 ).add_to(mapa1)
+
+mapa2 = folium.Map([-24.093570, -69.298989], zoom_start=7,  tiles='Stamen Terrain',)
+
+# Your code here: Add a heatmap to the map
+HeatMap(data=data[['Latitud', 'Longitud']], radius=15).add_to(mapa2)
+
         
         
 mapa1.save('mapa.html')
 mapa.save('index.html')
+mapa2.save('head.html')
