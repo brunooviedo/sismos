@@ -136,5 +136,5 @@ HeatMap(data=data[['Latitud', 'Longitud']], radius=15).add_to(mapa2)
         
         
 mapa1.save('mapa.html')
-mapa.save('index.html')
+mapa.save('areas.html')
 mapa2.save('head.html')
