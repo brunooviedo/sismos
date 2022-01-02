@@ -19,7 +19,6 @@ fig.update_layout(
     scene = dict(
         xaxis = dict(nticks=6),
                      zaxis = dict(nticks=4, range=[300,0],),),
-    width=700,
     margin=dict(r=20, l=10, b=10, t=10))
 
 fig2 = px.scatter(df, x='Fecha Local', y="magnitud", color='magnitud',
