@@ -22,6 +22,9 @@ fig.update_layout(
         xaxis = dict(nticks=6),
                      zaxis = dict(nticks=4, range=[300,0],),),) #se agrega rango al eje z
     # margin=dict(r=20, l=10, b=10, t=10)) #margen interno del grafico 3D
+    
+    # grafica de magnitud
+    
 #se vcrea la figura 2
 fig2 = px.scatter(df, x='Fecha Local', y="magnitud", color='magnitud',
                   color_continuous_scale=["blue", "green", "red"], title="Grafica de Magnitud")
