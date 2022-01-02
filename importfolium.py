@@ -157,8 +157,7 @@ folium.Circle(
     #fill_opacity=0.1,
     #fill_color="yellow",
 ).add_to(mapa2)
-
-        
+ 
         
 mapa1.save('mapa.html')
 mapa.save('areas.html')
