@@ -16,7 +16,11 @@ fig.update_layout(
     width=700,
     margin=dict(r=20, l=10, b=10, t=10))
 
+fig2 = px.scatter(df, x='Fecha Local', y="magnitud")
 
-fig.show()
+
+# fig.show()
+# fig2.show()
 
 fig.write_html("graf3d.html")
+fig2.write_html("magnitud.html")
