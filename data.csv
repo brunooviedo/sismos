@@ -1,5 +1,5 @@
 Fecha Local,Fecha UTC,Latitud,Longitud,Profundidad [Km],Magnitud,Referencia Geográfica
-2022-04-17 14:44:05,2022-04-17 18:44:05,-21.936,-70.463,30.9,3.6 Ml, 32 km al NO de Tocopilla
+2022-04-17 14:44:06,2022-04-17 18:44:06,-21.942,-70.436,30.9,3.6 Ml, 30 km al NO de Tocopilla
 2022-04-17 14:15:08,2022-04-17 18:15:08,-21.935,-70.39,30.5,3.8 Ml, 26 km al NO de Tocopilla
 2022-04-17 12:49:39,2022-04-17 16:49:39,-21.903,-70.48,30.6,2.5 Ml, 36 km al NO de Tocopilla
 2022-04-17 09:45:32,2022-04-17 13:45:32,-22.324,-68.068,192.2,2.5 Ml, 68 km al N de San Pedro de Atacama
@@ -7,6 +7,7 @@ Fecha Local,Fecha UTC,Latitud,Longitud,Profundidad [Km],Magnitud,Referencia Geog
 2022-04-17 02:21:29,2022-04-17 06:21:29,-23.974,-67.161,231.0,3.6 Ml, 86 km al SE de Socaire
 2022-04-17 02:16:52,2022-04-17 06:16:52,-26.315,-69.328,122.2,3.5 Ml, 30 km al E de El Salvador
 2022-04-17 01:07:58,2022-04-17 05:07:58,-21.707,-68.714,126.9,3.2 Ml, 72 km al SO de Ollagüe
+2022-04-17 14:44:05,2022-04-17 18:44:05,-21.936,-70.463,30.9,3.6 Ml, 32 km al NO de Tocopilla
 2022-04-17 14:44:08,2022-04-17 18:44:08,-21.967,-70.511,33.0,3.9 Ml, 35 km al O de Tocopilla
 2022-04-16 23:33:40,2022-04-17 03:33:40,-23.806,-67.353,220.9,3.6 Ml, 60 km al E de Socaire
 2022-04-17 02:21:29,2022-04-17 06:21:29,-23.966,-67.159,229.4,3.8 Ml, 85 km al SE de Socaire
